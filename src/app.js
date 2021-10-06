@@ -7,12 +7,12 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
-  let action = excuseGenerate();
-  console.log(action);
+  console.log("Hola!");
+  let excuse = excusegenerate();
+  document.write(excuse);
+  document.querySelector("#excuse").innerHTML = excuse;
 };
-
-function excuseGenerate() {
+function excusegenerate() {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
@@ -24,18 +24,20 @@ function excuseGenerate() {
     "while I was praying"
   ];
 
-  const array = document.querySelector("array");
-
+  console.log(randomelement(who));
+  console.log(randomelement(action));
+  console.log(randomelement(what));
+  console.log(randomelement(when));
   return (
-    randomElement(who) +
+    randomelement(who) +
     " " +
-    randomElement(action) +
+    randomelement(action) +
     " " +
-    randomElement(what) +
+    randomelement(what) +
     " " +
-    randomElement(when)
+    randomelement(when)
   );
 }
-function randomElement(array) {
+function randomelement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
